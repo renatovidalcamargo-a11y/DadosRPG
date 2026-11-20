@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dados do Aventureiro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="topbar">
+            <div class="logo">
+                <span>🎲</span>
+                <span>Dados do Aventureiro</span>
+            </div>
+
+            <span class="status">RPG DICE</span>
+        </header>
+
+        <main>
+
+            <section class="hero">
+                <p class="eyebrow">SUA JORNADA COMEÇA AQUI</p>
+                <h1>Monte sua <span>rolagem</span></h1>
+                <p>
+                    Escolha seus dados, monte seu conjunto
+                    e descubra o resultado!
+                </p>
+            </section>
+
+            <div class="main-grid">
+
+                <!-- ESCOLHA DOS DADOS -->
+                <section class="card">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Escolha seus dados</h2>
+                            <p>Clique para adicionar ao conjunto.</p>
+                        </div>
+                        <span class="section-icon">✦</span>
+                    </div>
+
+                    <div class="dice-options">
+
+                        <button class="dice-option" data-sides="4">
+                            <span class="die-symbol">◆</span>
+                            <strong>D4</strong>
+                            <small>4 faces</small>
+                        </button>
+
+                        <button class="dice-option" data-sides="6">
+                            <span class="die-symbol">⬡</span>
+                            <strong>D6</strong>
+                            <small>6 faces</small>
+                        </button>
+
+                        <button class="dice-option" data-sides="8">
+                            <span class="die-symbol">◇</span>
+                            <strong>D8</strong>
+                            <small>8 faces</small>
+                        </button>
+
+                        <button class="dice-option" data-sides="10">
+                            <span class="die-symbol">✧</span>
+                            <strong>D10</strong>
+                            <small>10 faces</small>
+                        </button>
+
+                        <button class="dice-option" data-sides="12">
+                            <span class="die-symbol">⬢</span>
+                            <strong>D12</strong>
+                            <small>12 faces</small>
+                        </button>
+
+                        <button class="dice-option" data-sides="20">
+                            <span class="die-symbol">✦</span>
+                            <strong>D20</strong>
+                            <small>20 faces</small>
+                        </button>
+
+                    </div>
+
+                </section>
+
+                <!-- CONJUNTO DE DADOS -->
+                <section class="card">
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Seu conjunto</h2>
+                            <p>Adicione quantos dados quiser.</p>
+                        </div>
+
+                        <span class="count-badge" id="diceCount">
+                            0 dados
+                        </span>
+                    </div>
+
+                    <div class="dice-pool" id="dicePool">
+                        <p class="empty-state">
+                            Nenhum dado selecionado.
+                            <br>
+                            Adicione seus primeiros dados!
+                        </p>
+                    </div>
+
+                    <div class="pool-actions">
+
+                        <button
+                            id="rollButton"
+                            class="button-primary"
+                            disabled
+                        >
+                            🎲 Rolar conjunto
+                        </button>
+
+                        <button
+                            id="clearPoolButton"
+                            class="button-secondary"
+                        >
+                            Limpar dados
+                        </button>
+
+                    </div>
+
+                </section>
+
+                <!-- RESULTADOS -->
+                <section class="card result-card" id="resultSection" hidden>
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Resultado da rolagem</h2>
+                            <p>Veja quanto cada dado conseguiu tirar.</p>
+                        </div>
+
+                        <span class="section-icon">⚔</span>
+                    </div>
+
+                    <div class="results-grid" id="resultsList"></div>
+
+                    <div class="total-panel">
+                        <span>RESULTADO TOTAL</span>
+                        <strong id="totalValue">0</strong>
+                    </div>
+
+                </section>
+
+                <!-- HISTÓRICO -->
+                <section class="card history-card">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <h2>Histórico</h2>
+                            <p>Suas últimas 10 rolagens.</p>
+                        </div>
+
+                        <button
+                            id="clearHistoryButton"
+                            class="clear-history"
+                        >
+                            Limpar histórico
+                        </button>
+
+                    </div>
+
+                    <div id="historyList">
+                        <p class="empty-state">
+                            Nenhuma rolagem realizada ainda.
+                        </p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Dados do Aventureiro • Sua sorte, sua jornada.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
